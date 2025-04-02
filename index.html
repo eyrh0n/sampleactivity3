@@ -3,62 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive CSS</title>
-
-    <!-- external CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>For Alex</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Hero Section -->   
-
-    <div class="header">
-        <h1>Web Development</h1>
+    <div class="container">
+        <h1>For Alex 🤍</h1>
+        <p id="poem">-solely from the heart-</p>
+        <button onclick="generatePoem()">Click me!</button>
+        <p class="signature">- shane</p>
     </div>
 
-    <div class="row">
-        <div class="col-3 col-s-3 menu">
+    <script>
+        const messages = [
+            "You are worth it.",
+            "Every moment with you feels like a beautifully written poem.",
+            "Loving you is like breathing—effortless and necessary.",
+            "If my heart could write, every page would be about you.",
+            "If only you could see you through these eyes of mine, \nI swear to God you'd know you're divine.",
+            "Knowing you more leads to loving you more.",
+            "All The Ridleys' songs are about you, you own them.",
+            "You are strong, do not forget that.",
+            "You are the reason even my worst days have a silver lining.",
+            "You have me always, in all ways.",
+            "I will always be your number one fan!",
+            "Other people don't matter, only u.",
+            "You deserve every good thing this world has to offer.",
+            "You are not a burden, nor a problem. You are a blessing.",
+            "Loving and understanding you will never be hard.",
+            "You won me, my heart, and my soul for eternity.",
+            "Just the thought of you makes my heart race in the best way possible."
+        ];
 
-        
-        <div>
-            <ul>
-                <li>Tailwind</li>
-                <li>Bootstrap</li>
-                <li>HTML</li>
-                <li>CSS</li>
-            </ul>
-        </div>
-        </div>
-    
+        function generatePoem() {
+            const allTexts = [
+                "Your laughter is a song I never knew I needed,\nA melody that lingers, never defeated.",
+                "I trace the sky just to find your hue,\nIn every shade, I see a part of you.",
+                "They said the stars are stories untold,\nYet in your eyes, I see galaxies unfold.",
+                "If love had a language, it'd sound like your name,\nA rhythm, a whisper, a beautiful flame.",
+                "You are the sunrise I never expected,\nYet here you are, my soul connected.",
+                "Every glance from you rewrites my fate,\nLike constellations shifting, a love innate.",
+                "You walk like poetry, speak in prose,\nEvery word you say, a verse that flows.",
+                "Even the moon envies the glow in your eyes,\nA light that shames the midnight skies.",
+                "I’ve written countless lines, yet none compare,\nTo the beauty you hold, the love you bare.",
+                "If my heart were a compass, it’d point to you,\nA north star steady, a love so true."
+            ].concat(messages);
 
-
-<!-- main content -->
-<div class="col-6 col-s-9">
-    
-<div>
-    <h1>Responsiveness</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, qui. Maiores aliquid eius nostrum aperiam placeat nam rem nisi exercitationem! Quod eligendi commodi pariatur ipsum!</p>
-</div>
-</div>
-
-    <!-- sidenav -->
-
-    <div>
-        <div class="col-3 col-s-12">
-        <div class="aside">
-            <h2>What?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <h2>Where?</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-            <h2>How?</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-        </div>
-    </div>
-    </div>
-</div>
-    <!-- footer -->
-    <div class="footer">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, numquam.</p>
-    </div>
+            const randomIndex = Math.floor(Math.random() * allTexts.length);
+            document.getElementById("poem").textContent = allTexts[randomIndex];
+        }
+    </script>
 </body>
 </html>
